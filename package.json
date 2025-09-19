@@ -1,0 +1,32 @@
+{
+  "name": "web-app-turbo",
+  "version": "1.0.0",
+  "description": "Web App Turbo - Full Stack Application",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:start\"",
+    "start": "concurrently \"npm run server:start\" \"npm run client:start\"",
+    "build": "npm run client:build",
+    "client:start": "cd client && npm start",
+    "client:build": "cd client && npm run build",
+    "server:start": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "test": "npm run test:client && npm run test:server",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iceman-vici/web-app-turbo.git"
+  },
+  "author": "",
+  "license": "MIT"
+}
