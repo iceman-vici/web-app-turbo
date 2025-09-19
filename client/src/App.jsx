@@ -18,6 +18,7 @@ import Settings from './pages/Settings';
 import Users from './pages/Users';
 import Analytics from './pages/Analytics';
 import Reports from './pages/Reports';
+import PowerDialer from './pages/PowerDialer';
 import NotFound from './pages/NotFound';
 
 // Components
@@ -58,6 +59,7 @@ function App() {
                 <Route path="users" element={<Users />} />
                 <Route path="analytics" element={<Analytics />} />
                 <Route path="reports" element={<Reports />} />
+                <Route path="dialer" element={<PowerDialer />} />
               </Route>
 
               {/* 404 Route */}
