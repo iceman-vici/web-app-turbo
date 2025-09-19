@@ -1,0 +1,107 @@
+.recent-activity {
+  height: fit-content;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.activity-item:hover {
+  background-color: var(--bg-secondary);
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.activity-icon.success {
+  background-color: #f0fdf4;
+  color: var(--success-color);
+}
+
+.activity-icon.info {
+  background-color: #eff6ff;
+  color: var(--info-color);
+}
+
+.activity-icon.danger {
+  background-color: #fef2f2;
+  color: var(--danger-color);
+}
+
+.activity-icon.primary {
+  background-color: #eef2ff;
+  color: var(--primary-color);
+}
+
+.activity-icon.warning {
+  background-color: #fffbeb;
+  color: var(--warning-color);
+}
+
+.activity-icon.default {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-user {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.activity-action {
+  color: var(--text-secondary);
+  margin: var(--spacing-xs) 0;
+  font-size: var(--font-size-sm);
+}
+
+.activity-time {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+  margin: 0;
+}
+
+.view-all-btn {
+  width: 100%;
+  padding: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  color: var(--text-primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.view-all-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
