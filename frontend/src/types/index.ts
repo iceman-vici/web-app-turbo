@@ -1,2 +1,0 @@
-// This file has been moved to constants/index.js
-// The frontend now uses JavaScript/JSX instead of TypeScript
