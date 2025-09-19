@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useHotkeysHook } from 'react-hotkeys-hook';
+import { useHotkeys as useHotkeysHook } from 'react-hotkeys-hook';
 import { useDialerStore } from '../store/dialerStore';
 import { Disposition } from '../types';
 import { dialerService } from '../services/dialer';

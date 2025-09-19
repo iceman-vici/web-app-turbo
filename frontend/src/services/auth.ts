@@ -1,5 +1,3 @@
-import jwt from 'jsonwebtoken';
-
 class AuthService {
   async login(agentEmail: string): Promise<string> {
     // In production, this would make an API call to get a real JWT
