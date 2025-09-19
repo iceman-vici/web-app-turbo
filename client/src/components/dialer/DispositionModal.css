@@ -1,0 +1,212 @@
+.disposition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s;
+}
+
+.disposition-modal {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  width: 90%;
+  max-width: 600px;
+  animation: slideUp 0.3s;
+}
+
+.disposition-header {
+  padding: var(--spacing-xl);
+  border-bottom: 2px solid var(--border-color);
+  text-align: center;
+}
+
+.disposition-header h2 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
+  font-size: var(--font-size-2xl);
+}
+
+.call-details {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+}
+
+.call-details h3 {
+  margin: 0;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+  font-size: var(--font-size-xl);
+}
+
+.call-details p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+}
+
+.call-duration {
+  margin-top: var(--spacing-sm) !important;
+  font-weight: 600;
+  color: var(--primary-color) !important;
+}
+
+.disposition-body {
+  padding: var(--spacing-xl);
+}
+
+.disposition-prompt {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+}
+
+.disposition-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.disposition-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  text-align: left;
+}
+
+.disposition-btn:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+}
+
+.disposition-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-md);
+  font-weight: bold;
+  font-size: var(--font-size-xl);
+  flex-shrink: 0;
+}
+
+.disposition-icon {
+  font-size: var(--font-size-2xl);
+  flex-shrink: 0;
+}
+
+.disposition-label {
+  flex: 1;
+  color: var(--text-primary);
+}
+
+/* Disposition color variants */
+.disposition-success:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: var(--success-color);
+}
+
+.disposition-success .disposition-key {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: var(--success-color);
+}
+
+.disposition-warning:hover {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: var(--warning-color);
+}
+
+.disposition-warning .disposition-key {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: var(--warning-color);
+}
+
+.disposition-info:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: var(--info-color);
+}
+
+.disposition-info .disposition-key {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: var(--info-color);
+}
+
+.disposition-primary:hover {
+  background-color: rgba(79, 70, 229, 0.1);
+  border-color: var(--primary-color);
+}
+
+.disposition-primary .disposition-key {
+  background-color: rgba(79, 70, 229, 0.2);
+  color: var(--primary-color);
+}
+
+.disposition-danger:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--danger-color);
+}
+
+.disposition-danger .disposition-key {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: var(--danger-color);
+}
+
+.disposition-footer {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.disposition-hint {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .disposition-modal {
+    width: 95%;
+  }
+
+  .disposition-btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
